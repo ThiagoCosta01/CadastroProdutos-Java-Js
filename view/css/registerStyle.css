@@ -55,9 +55,9 @@ body {
     color: #d2b8f3;
     cursor: pointer;
 }
-
 .menuButton:active {
     color: #ffffff;
+    
 }
 .form-image {
     background-image: 
