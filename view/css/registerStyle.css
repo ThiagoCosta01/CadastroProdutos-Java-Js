@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;700;900&display=swap');
+
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121115;
+}
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+}
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background-color: rgb(240, 240, 240);
+    padding: 3rem;
+    border-radius: 0 50px 50px 0 ;
+    
+}
+.menuButtonBox{
+    border: none;
+    background-color: rgb(83, 3, 157);
+    padding: 0 1.4rem 0 1.4rem;
+    border-radius: 50px 0px 0 50px; 
+    writing-mode: vertical-rl;
+    text-align: center;
+    display: inline;
+}
+.menuButtonCase {
+    flex-direction: column;
+    align-items:center;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+}
+.menuButton {
+    font-size: 30px;
+    text-decoration:none;
+    color: #d2b8f3;
+    cursor: pointer;
+}
+.menuButton:active {
+    color: #ffffff;
+    
+}
+.form-image {
+    background-image: 
+    linear-gradient(to right,rgb(42, 2, 80) 99.5%,rgb(240, 240, 240));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.form-image img {
+    background-color: rgb(42, 2, 80);
+    width: 23rem;
+    padding-right: 40px;
+}
+.input-group{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+h1::after{
+    content: "";
+    display: block;
+    width: 11rem;
+    height: 0.1rem;
+    background-color: #610f5a;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+}
+.input-box input:hover {
+    background-color: rgba(20, 16, 20, 0.336);
+}
+
+.input-box input:focus-visible {
+    outline: 2px solid rgb(160, 44, 135);
+}
+
+.registerButton {
+    border: none;
+    margin-top: 15px;
+    background-color: rgb(63, 3, 120);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.registerButton:hover{
+    background-color: #a40497;
+}
+.registerButton>span{
+    color: azure;
+}
+
+
+
+/*
+@media screen and (max-width: 1064px ){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+
+    .input-group{
+        flex-direction: column;
+        
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+}
+*/
