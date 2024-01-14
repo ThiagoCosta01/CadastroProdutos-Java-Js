@@ -5,12 +5,13 @@
 }
 
 .corpoTabela {
+    
     width: 80%;
     margin: 5% 10% 0 10%;
     background-color: rgba(187, 29, 255, 0.264);
     border-radius: 10px;
     min-height: 800px;
-    max-height: 800px;
+    max-height: 80vh;
     overflow: hidden;
     overflow-y: scroll;
 }
