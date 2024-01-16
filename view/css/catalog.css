@@ -1,16 +1,17 @@
+.fundo {
+    background-color: rgb(4, 2, 42);
+}
 .container {
-    background-color: rgba(4, 2, 42, 0.719);
+    background-color: rgba(9, 4, 94, 0.279);
     width: 100%;
     height: 100vh;
 }
-
 .corpoTabela {
-    
     width: 80%;
     margin: 5% 10% 0 10%;
     background-color: rgba(187, 29, 255, 0.264);
     border-radius: 10px;
-    min-height: 800px;
+    min-height: 80vh;
     max-height: 80vh;
     overflow: hidden;
     overflow-y: scroll;
@@ -26,8 +27,6 @@
     text-align: center;
     color: rgb(255, 255, 255);
 }
-
-
 th {
     border: 1px solid black;
     background-color:rgba(62, 4, 129, 0.582) ;

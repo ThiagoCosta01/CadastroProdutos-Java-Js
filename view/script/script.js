@@ -52,6 +52,36 @@ document.addEventListener('DOMContentLoaded', function () {
         inputDescricao.value = "";
     }
 
+    // cria a tabela
+
+    function show(productsCatalog) {
+
+        let tab = `
+        <thead>
+        <th scope="col">Id</th>
+        <th scope="col">Nome do produto</th>
+        <th scope="col">Valor do produto</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Descrição</th>
+        </thead>
+        `;
+
+        for (let product of productsCatalog) {
+            tab += `
+            <tr>
+                <td scope="row">${product.productId}</td>
+                <td scope="row">${product.productName}</td>
+                <td scope="row">${product.productPrice}</td>
+                <td scope="row">${product.productQTD}</td>
+                <td scope="row">${product.productInfo}</td>
+            </tr>
+            `;
+        }
+
+        document.getElementById("productsCatalog").innerHTML = tab;
+    }
+
+
     //dispara ao pressionar o botão de cadastrar na página register
     async function registerNewProduct() {
         try {
