@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
         inputValor.value = "";
         inputDescricao.value = "";
     }
-
     // cria a tabela
     function show(catalogoProdutos) {
 
@@ -67,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var state = true;
         var color = "";
 
-        
         for (let product of catalogoProdutos) {
             if(state) {
                 color = "#010132";

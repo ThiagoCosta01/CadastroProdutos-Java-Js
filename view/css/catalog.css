@@ -20,17 +20,17 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
+    box-shadow: 0px 1px #0040ff3c;
 }
 .menuButton:hover{
-    color:#00e5ff;
-    box-shadow: 0px 1px #03809177;
+    box-shadow: 0px 2px #0040ffc6
 }
 .tableBody{
     width: 80%;
     margin: 0 10% 0 10%;
     border-radius: 10px;
     min-width: 150px;
-    max-height: 500px;
+    max-height: 600px;
     overflow-y: auto;
     border-collapse: collapse;
 }

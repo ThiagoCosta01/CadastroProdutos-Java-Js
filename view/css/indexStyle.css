@@ -6,10 +6,14 @@
     box-sizing: border-box;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
-    
 }
-
 body {
+    background: 
+    linear-gradient(
+        225deg, #000e1cd4, 
+        #08002b, 
+        #022514c4
+        );
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -18,20 +22,23 @@ body {
 }
 .container {
     padding: 10%;
-    background-color: rgb(42, 2, 80);
-    width: 100%;
+    background:  linear-gradient(
+        225deg, #000e1cd4, 
+        #10005c, 
+        #022514c4
+        );
+    width: 60%;
     height: 80vh;
-    box-shadow: 10px 0px white;
+    border-radius: 50px;
 }
 .titulos {
-    color: white;
+    color: #ffffff;
     font-size: 25px;
     padding-bottom: 5%;
 }
 .titulos>h1 {
     margin-bottom: 20px;
 }
-
 h2 {
     font-size: 30px;
     letter-spacing: 5px;
@@ -51,14 +58,13 @@ h2 {
 }
 .listButton {
     font-size: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-right: 5%;
     padding-top: 2px;
+    box-shadow: 0px 1px #0040ff3c;
 }
 .listButton:hover {
-    letter-spacing: 0.1px;
-    color:rgba(98, 0, 255, 0.493);
-    box-shadow: 0px 1px rgba(3, 128, 145, 0.466);
+    padding-right: 10%;
+    box-shadow: 0px 1.5px #0040ffc6;
 }
 .contact {
     width: 300px;
@@ -69,20 +75,17 @@ h2 {
     padding-top: 50px;
 }
 .contactButton {
+    margin-top: 50%;
     padding-left: 25px;
     font-size: 25px;
 }
 #linkedinButton:hover {
-    color: rgb(35, 0, 177);
-}
-#linkedinButton:active {
-    text-shadow: 3px 3px rgba(0, 255, 255, 0.142);
+    color: #003cff;
+    text-shadow: 3px 3px #00ffff24;
 }
 #githubButton:hover {
-    color:blueviolet
-}
-#githubButton:active {
-    text-shadow:3px 3px rgba(137, 43, 226, 0.249);
+    color:#6800c9;
+    text-shadow: 3px 3px #8400ff3f;
 }
 
 

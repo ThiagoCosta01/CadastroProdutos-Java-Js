@@ -10,6 +10,12 @@
     font-size: 20px;
 }
 body {
+    background: 
+    linear-gradient(
+        225deg, #000e1cd4, 
+        #10005c, 
+        #022514c4
+        );
     width: 100%;
     height: 100vh;
     display: flex;
@@ -35,7 +41,7 @@ body {
 }
 .menuButtonBox{
     border: none;
-    background-color: rgb(83, 3, 157);
+    background-color: rgb(14, 0, 74);
     padding: 0 1.4rem 0 1.4rem;
     border-radius: 50px 0px 0 50px; 
     writing-mode: vertical-rl;
@@ -52,16 +58,12 @@ body {
 .menuButton {
     font-size: 30px;
     text-decoration:none;
-    color: #d2b8f3;
-    cursor: pointer;
-}
-.menuButton:active {
     color: #ffffff;
-    
+    cursor: pointer;
 }
 .form-image {
     background-image: 
-    linear-gradient(to right,rgb(42, 2, 80) 99.5%,rgb(240, 240, 240));
+    linear-gradient(to right,#0a02505b 20%,#f0f0f0);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -70,7 +72,6 @@ body {
     padding-right: 15%;
 }
 .form-image img {
-    background-color: rgb(42, 2, 80);
     width: 23rem;
     padding-right: 40px;
 }
@@ -89,7 +90,7 @@ h1::after{
     display: block;
     width: 11rem;
     height: 0.1rem;
-    background-color: #610f5a;
+    background-color: #080080;
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -99,47 +100,29 @@ h1::after{
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px black;
+    box-shadow: 1px 1px 6px #00097161;
 }
 .input-box input:hover {
-    background-color: rgba(20, 16, 20, 0.336);
+    background-color: #0800ff0c;
 }
 
 .input-box input:focus-visible {
-    outline: 2px solid rgb(160, 44, 135);
+    outline: 2px solid #050dff;
 }
 
 .registerButton {
     border: none;
     margin-top: 15px;
-    background-color: rgb(63, 3, 120);
+    background-color: #2b00ffd2;
     padding: 0.5rem 1.5rem;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: 1px 1px 2px #000971d7;
 }
 
 .registerButton:hover{
-    background-color: #a40497;
+    background-color: #3404a4;  
 }
 .registerButton>span{
     color: azure;
 }
-
-
-
-/*
-@media screen and (max-width: 1064px ){
-    .container{
-        width: 90%;
-        height: auto;
-    }
-
-    .input-group{
-        flex-direction: column;
-        
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
-    }
-}
-*/
