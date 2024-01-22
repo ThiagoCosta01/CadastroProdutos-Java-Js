@@ -27,11 +27,11 @@ body {
     color: white;
     font-size: 25px;
     padding-bottom: 5%;
-    text-shadow: 5px 3px black;
 }
 .titulos>h1 {
     margin-bottom: 20px;
 }
+
 h2 {
     font-size: 30px;
     letter-spacing: 5px;
@@ -40,7 +40,6 @@ h2 {
 .mainBotoes {
     display: inline;
 }
-
 .mainBotoes>li {
     width: 200px;
     height: 30px;
@@ -48,16 +47,18 @@ h2 {
     list-style-type: none;
     text-decoration: none;
     border-radius: 5px;
-    background-color: rgb(103, 2, 198);
     margin-top: 20px;
 }
 .listButton {
     font-size: 20px;
-    padding-left: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 2px;
 }
 .listButton:hover {
-    color:rgb(23, 0, 50);
+    letter-spacing: 0.1px;
+    color:rgba(98, 0, 255, 0.493);
+    box-shadow: 0px 1px rgba(3, 128, 145, 0.466);
 }
 .contact {
     width: 300px;

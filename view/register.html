@@ -31,20 +31,23 @@
                 <ul>
                     <li class="input-box">
                         <h3>Nome do Produto:</h3>
-                        <input type="text" id="nomeProduto" name="nomeProduto" placeholder="insira o nome">
+                        <input type="text" required="true" id="nomeProduto" name="nomeProduto" placeholder="insira o nome">
                     </li>
                     <li class="input-box">
                         <h3>Valor do Produto:</h3>
-                        <input type="number" id="valorProduto" name="valorProduto" placeholder="R$ ___,__" step="0.01" min="0.00">
+                        <input type="number" required="true" id="valorProduto" name="valorProduto" placeholder="R$ ___,__" step="0.01" min="0.00">
                     </li>  
                     <li class="input-box">
                         <h3>Descrição:</h3>
-                        <input type="text" id="descricaoProduto" name="descricaoProduto" placeholder="informe detalhes">
+                        <input type="text" required="true" id="descricaoProduto" name="descricaoProduto" placeholder="informe detalhes">
                     </li>      
                 </ul>
                 <button class='registerButton' id="register-button">
                     <span>Cadastrar</span>
                 </button>
+                <dialog id="popup" style="color:black;">
+                    <p>Produto cadastrado</p>
+                </dialog>
             </div>        
         </div>    
     </main>

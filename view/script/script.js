@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const apiUrl = "http://localhost:8080/product";
@@ -5,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputProduto = document.getElementById('nomeProduto');
     const inputValor = document.getElementById('valorProduto');
     const inputDescricao = document.getElementById('descricaoProduto');
-    const catalogoProdutos = document.getElementById("catalogoProdutos");
+    const catalogoProdutos = document.getElementById("productsCatalog");
     const btnListagem = document.getElementById('listagemB');
     const loadingElement = document.getElementById("loading");
 
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     async function connectApi(){
         try{
             await fetch(apiUrl, {method: "HEAD"});
-            alert("sucesso");
+            console.log("connected");
 
         }
 
@@ -32,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     async function fetchData(url) {
         try {
             const response = await fetch(url);
-
+            
             if (!response.ok) {
                 throw new Error(`Erro na requisição: ${response.status}`);
             }
@@ -46,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
     function clearInputs() {
         inputProduto.value = "";
         inputValor.value = "";
@@ -53,37 +56,52 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // cria a tabela
-
-    function show(productsCatalog) {
+    function show(catalogoProdutos) {
 
         let tab = `
         <thead>
-        <th scope="col">Id</th>
         <th scope="col">Nome do produto</th>
         <th scope="col">Valor do produto</th>
-        <th scope="col">Quantidade</th>
         <th scope="col">Descrição</th>
-        </thead>
-        `;
+        </thead>`;
+        var state = true;
+        var color = "";
 
-        for (let product of productsCatalog) {
+        
+        for (let product of catalogoProdutos) {
+            if(state) {
+                color = "#010132";
+                state = false;
+            }
+            else{
+                color = "#ffffff00";
+                state = true;
+             }
             tab += `
-            <tr>
-                <td scope="row">${product.productId}</td>
-                <td scope="row">${product.productName}</td>
-                <td scope="row">${product.productPrice}</td>
-                <td scope="row">${product.productQTD}</td>
-                <td scope="row">${product.productInfo}</td>
+            <tr style="background-color: ${color};">
+                <td id="productName" scope="row">${product.name}</td>
+                <td id="productValue" scope="row">$${product.value}</td>
+                <td id="productDesc" scope="row">${product.desc}</td>
             </tr>
             `;
         }
 
         document.getElementById("productsCatalog").innerHTML = tab;
     }
+    async function getAPI(apiUrl) {
+        
+        const response = await fetch(apiUrl, {method: "GET"});
 
+        var data = await response.json();
+        
+        if(response) hideLoader();
+        show(data);
+    }
+    getAPI(apiUrl)    
 
     //dispara ao pressionar o botão de cadastrar na página register
     async function registerNewProduct() {
+        
         try {
             const response = await fetch(apiUrl, {
                 method: "POST",
@@ -102,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             console.log(response.ok);
+            alert("Cadastro realizado!\nProduto: " + inputProduto.value + "\nPreço: " + inputValor.value)
 
-            alert("Cadastro realizado!\nProduto: " + inputProduto.value + "\nPreço: " + inputValor.value);
             clearInputs();
 
         } catch (error) {
@@ -112,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     btnRegisterProduct.addEventListener("click", registerNewProduct);
-
     fetchData(apiUrl);
     connectApi()
 
