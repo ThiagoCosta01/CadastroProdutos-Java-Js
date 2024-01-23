@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;700;900&display=swap');
-
-
+:root {
+    --gradient-back: linear-gradient(
+        225deg, #000e1cd4, 
+        #08002b, 
+        #022514c4);
+    --gradient-front: linear-gradient(
+        225deg, #000e1cd4,
+        #10005c,
+        #09003bd5);
+    --gradient-menuBtn: linear-gradient(
+        225deg,#09003bd5 30%, 
+        #180081, 
+        #09003bd5);
+}
 * {
     text-decoration: none;
     padding: 0;
@@ -10,12 +22,7 @@
     font-size: 20px;
 }
 body {
-    background: 
-    linear-gradient(
-        225deg, #000e1cd4, 
-        #10005c, 
-        #022514c4
-        );
+    background: var(--gradient-back);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -34,14 +41,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    background-color: rgb(240, 240, 240);
+    background-color: #ffffff;
     padding: 3rem;
     border-radius: 0 50px 50px 0 ;
     
 }
 .menuButtonBox{
     border: none;
-    background-color: rgb(14, 0, 74);
+    background: var(--gradient-menuBtn);
     padding: 0 1.4rem 0 1.4rem;
     border-radius: 50px 0px 0 50px; 
     writing-mode: vertical-rl;
@@ -62,8 +69,7 @@ body {
     cursor: pointer;
 }
 .form-image {
-    background-image: 
-    linear-gradient(to right,#0a02505b 20%,#f0f0f0);
+    background: var(--gradient-front);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -113,7 +119,7 @@ h1::after{
 .registerButton {
     border: none;
     margin-top: 15px;
-    background-color: #2b00ffd2;
+    background: var(--gradient-menuBtn);
     padding: 0.5rem 1.5rem;
     cursor: pointer;
     border-radius: 10px;

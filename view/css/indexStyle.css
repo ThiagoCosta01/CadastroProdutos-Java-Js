@@ -1,3 +1,15 @@
+:root {
+    --gradient-back: linear-gradient(
+        225deg, #000e1cd4, 
+        #08002b, 
+        #022514c4);
+    --gradient-front: linear-gradient(
+        225deg, #000e1cd4,
+        #10005c,
+        #022514c4);
+    --buttonShadow: 0px 1px #0040ff3c;
+    --buttonShadow-hover: 0px 1.5px #0040ffc6;
+}
 *,a {
     text-decoration: none;
     color: aliceblue;
@@ -8,25 +20,16 @@
     font-size: 50px;
 }
 body {
-    background: 
-    linear-gradient(
-        225deg, #000e1cd4, 
-        #08002b, 
-        #022514c4
-        );
+    background: var(--gradient-back);
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #121115;
+    background-color: #3d00f2;
 }
 .container {
     padding: 10%;
-    background:  linear-gradient(
-        225deg, #000e1cd4, 
-        #10005c, 
-        #022514c4
-        );
+    background:  var(--gradient-front);
     width: 60%;
     height: 80vh;
     border-radius: 50px;
@@ -60,11 +63,11 @@ h2 {
     font-size: 20px;
     margin-right: 5%;
     padding-top: 2px;
-    box-shadow: 0px 1px #0040ff3c;
+    box-shadow: var(--buttonShadow);
 }
 .listButton:hover {
     padding-right: 10%;
-    box-shadow: 0px 1.5px #0040ffc6;
+    box-shadow: var(--buttonShadow-hover);
 }
 .contact {
     width: 300px;
