@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const catalogoProdutos = document.getElementById("productsCatalog");
     const btnListagem = document.getElementById('listagemB');
     const loadingElement = document.getElementById("loading");
+    const darkmodeBtn = document.getElementById("darkmodeBtn");
+    
+    //muda o tema para dark mode ou light mode
+    darkmodeBtn.addEventListener("change", (e) => {
+        document.body.classList.toggle("dark", e.target.checked)
+    });
 
     //esconde o loader do bootstrap quando a conexão com a API acontecer
     function hideLoader() {

@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;700;900&display=swap');
+
+/* variaveis de gradiente usadas no fundo e outros elementos html */
 :root {
-    --gradient-back: linear-gradient(
+    --gradient-back-dark: linear-gradient(
         225deg, #000e1cd4, 
         #08002b, 
-        #022514c4);
-    --gradient-front: linear-gradient(
+        #010b31c4);
+    --gradient-front-dark: linear-gradient(
         225deg, #000e1cd4,
         #10005c,
         #09003bd5);
-    --gradient-menuBtn: linear-gradient(
+    --gradient-back-light: linear-gradient(
+        225deg, #ffffff00, 
+        #00eaff75, 
+        #ffffff00);
+    --gradient-front-light: linear-gradient(
+        225deg, #ffffff00, 
+        #00eaff, 
+        #056cb166);
+    --gradient-menuBtn-dark: linear-gradient(
         225deg,#09003bd5 30%, 
         #180081, 
         #09003bd5);
+    --gradient-menuBtn-light: linear-gradient(
+        225deg,#00ccff 25%, 
+        #0099ffa9, 
+        #028c9e76);
 }
 * {
     text-decoration: none;
@@ -21,14 +35,52 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
 }
+/* Dark mode config  */
+body.dark {
+    background: var(--gradient-back-dark);
+}
+body.dark label{
+    background: var(--gradient-front-light);
+    border: solid 1px #ffffff;
+}
+body.dark .form-image {
+    background:var(--gradient-front-dark);
+}
+body.dark .menuButtonBox{
+    background: var(--gradient-menuBtn-dark);
+}
+body.dark .registerButton {
+    background: var(--gradient-menuBtn-dark);
+}
+body.dark .input-box input {
+    box-shadow: 1px 1px 6px #00097161;
+}
+body.dark .input-box input:hover {
+    background-color: #0800ff0c;
+}
+/*-------------------------------------------*/
 body {
-    background: var(--gradient-back);
+    background: var(--gradient-back-light);
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #121115;
+}
+label{
+    background: var(--gradient-front-dark);
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+.darkmodeBtnBox {
+    margin-left: 5%;
+}
+#darkmodeBtn {
+    visibility: hidden;
 }
 .container {
     width: 80%;
@@ -44,11 +96,10 @@ body {
     background-color: #ffffff;
     padding: 3rem;
     border-radius: 0 50px 50px 0 ;
-    
 }
 .menuButtonBox{
     border: none;
-    background: var(--gradient-menuBtn);
+    background: var(--gradient-menuBtn-light);
     padding: 0 1.4rem 0 1.4rem;
     border-radius: 50px 0px 0 50px; 
     writing-mode: vertical-rl;
@@ -69,7 +120,7 @@ body {
     cursor: pointer;
 }
 .form-image {
-    background: var(--gradient-front);
+    background: var(--gradient-front-light);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -106,10 +157,10 @@ h1::after{
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #00097161;
+    box-shadow: 1px 1px 6px #00587161;
 }
 .input-box input:hover {
-    background-color: #0800ff0c;
+    background-color: #00eeff2b;
 }
 
 .input-box input:focus-visible {
@@ -119,15 +170,15 @@ h1::after{
 .registerButton {
     border: none;
     margin-top: 15px;
-    background: var(--gradient-menuBtn);
+    background: var(--gradient-menuBtn-light);
     padding: 0.5rem 1.5rem;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 1px 1px 2px #000971d7;
+    box-shadow: 1px 1px 2px #0390a2a2;
 }
 
 .registerButton:hover{
-    background-color: #3404a4;  
+    background-color: #4e02ffae;  
 }
 .registerButton>span{
     color: azure;

@@ -1,12 +1,20 @@
 :root {
-    --gradient-back: linear-gradient(
+    --gradient-back-dark: linear-gradient(
         225deg, #000e1cd4, 
         #08002b, 
         #022514c4);
-    --gradient-front: linear-gradient(
+    --gradient-front-dark: linear-gradient(
         225deg, #000e1cd4,
         #10005c,
         #022514c4);
+    --gradient-back-light: linear-gradient(
+        225deg, #00f7ffdc, 
+        #018793de, 
+        #067973e0);
+    --gradient-front-light: linear-gradient(
+        225deg, #00ccff, 
+        #0cd9ebb4, 
+        #0594b166);
     --buttonShadow: 0px 1px #0040ff3c;
     --buttonShadow-hover: 0px 1.5px #0040ffc6;
 }
@@ -19,17 +27,55 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
 }
-body {
-    background: var(--gradient-back);
+/* Dark mode config */
+body.dark {
+    background: var(--gradient-back-dark);
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: #3d00f2;
 }
+body.dark .container {
+    padding: 10%;
+    background:  var(--gradient-front-dark);
+    width: 60%;
+    height: 80vh;
+    border-radius: 50px;
+}
+body.dark label {
+    background: var(--gradient-front-light);
+    border: 1px solid #ffffff;
+}
+/*-----------------------------------------*/
+body {
+    background: var(--gradient-back-light);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d00f2;
+}
+.darkmodeBtnBox {
+    margin-right: 10%;
+    text-align: right;
+}
+label{
+    margin: 0;
+    background: var(--gradient-front-dark);
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+#darkmodeBtn {
+    visibility: hidden;
+}
 .container {
     padding: 10%;
-    background:  var(--gradient-front);
+    background:  var(--gradient-front-light);
     width: 60%;
     height: 80vh;
     border-radius: 50px;
@@ -83,12 +129,10 @@ h2 {
     font-size: 25px;
 }
 #linkedinButton:hover {
-    color: #003cff;
-    text-shadow: 3px 3px #00ffff24;
+    color: #00eeff;
 }
 #githubButton:hover {
-    color:#6800c9;
-    text-shadow: 3px 3px #8400ff3f;
+    color:#ad5df7;
 }
 
 
